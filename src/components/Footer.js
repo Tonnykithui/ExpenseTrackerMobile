@@ -8,34 +8,29 @@ import {
   TextInput,
   Platform,
   SafeAreaView,
-  StatusBar
 } from "react-native";
 import { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { modalOpen } from "../redux/modal";
 
 export const CreateNew = () => {
-  const [modalState, setModalState] = useState(false);
+  const dispatch = useDispatch();
+
+  let openModal = () => {
+    dispatch(
+      modalOpen({
+        modal: true,
+      })
+    );
+  };
 
   return (
     <View style={styles.buttonBackground}>
-      <TouchableOpacity onPress={() => setModalState(true)}>
+      <TouchableOpacity onPress={openModal}>
         <View style={styles.button}>
           <Text style={styles.buttonText}>+</Text>
         </View>
       </TouchableOpacity>
-      <Modal visible={modalState} transparent={true} animationType="slide">
-        <View style={styles.centeredView}>
-          <View style={styles.modalView}>
-            <Text style={styles.transactionModalText}>Add Transaction</Text>
-            <View>
-              <TextInput placeholder="Transaction name"></TextInput>
-              <TextInput placeholder="Amount"></TextInput>
-            </View>
-            <TouchableOpacity onPress={() => setModalState(false)}>
-              <Text>Close Modal</Text>
-            </TouchableOpacity>
-          </View>
-        </View>
-      </Modal>
     </View>
   );
 };
@@ -65,21 +60,6 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: "bold",
   },
-  centeredView: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    marginTop: Platform.OS === 'android' ? StatusBar.currentHeight : SafeAreaView
-    // marginTop: 22,
-  },
-  modalView: {
-    backgroundColor: "white",
-    borderRadius: 10,
-    padding: 10,
-    alignItems: "center",
-    elevation: 5,
-    width: "80%",
-  },
   transactionModalText: {
     fontSize: 20,
     fontWeight: "bold",
@@ -96,4 +76,20 @@ const styles = StyleSheet.create({
           onPress={() => setModalState(false)}
           ></Button>
         </View> */
+}
+{
+  /* <Modal visible={modalState} transparent={true} animationType="slide">
+        <View style={styles.centeredView}>
+          <View style={styles.modalView}>
+            <Text style={styles.transactionModalText}>Add Transaction</Text>
+            <View>
+              <TextInput placeholder="Transaction name"></TextInput>
+              <TextInput placeholder="Amount"></TextInput>
+            </View>
+            <TouchableOpacity onPress={() => setModalState(false)}>
+              <Text>Close Modal</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+      </Modal> */
 }

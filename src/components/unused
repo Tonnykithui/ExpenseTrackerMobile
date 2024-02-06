@@ -1,0 +1,361 @@
+{
+  /* <View style={styles.container}>
+            <Header />
+            <Transactions />
+            <CreateNew />
+            <ModalComponent />
+          </View> */
+}
+{
+  /* <Stack.Screen name="New Bill" component={NewBill}></Stack.Screen> */
+}
+{
+  /* <ModalComponent /> */
+}
+        {/* <CreateNew /> */}
+        {/* <KeyboardAvoidingView style={{ flex: 1 }} behavior="padding"> */}
+        {/* </KeyboardAvoidingView> */}
+        // import modal from "../redux/modal";
+
+        // const transactions = [
+  //   {
+  //     id: 1,
+  //     income: true,
+  //     amount: 2400,
+  //     description: "side hustle",
+  //   },
+  //   {
+  //     id: 2,
+  //     income: false,
+  //     amount: 1400,
+  //     description: "Sandals",
+  //   },
+  //   {
+  //     id: 3,
+  //     income: true,
+  //     amount: 22400,
+  //     description: "Pay",
+  //   },
+  //   {
+  //     id: 4,
+  //     income: true,
+  //     amount: 2400,
+  //     description: "side hustle 2",
+  //   },
+  //   {
+  //     id: 168,
+  //     income: true,
+  //     amount: 2400,
+  //     description: "side hustle",
+  //   },
+  //   {
+  //     id: 246,
+  //     income: false,
+  //     amount: 1400,
+  //     description: "Sandals",
+  //   },
+  //   {
+  //     id: 223,
+  //     income: true,
+  //     amount: 22400,
+  //     description: "Pay",
+  //   },
+  //   {
+  //     id: 344,
+  //     income: true,
+  //     amount: 2400,
+  //     description: "side hustle 2",
+  //   },
+  //   {
+  //     id: 122,
+  //     income: true,
+  //     amount: 2400,
+  //     description: "side hustle",
+  //   },
+  //   {
+  //     id: 21,
+  //     income: false,
+  //     amount: 1400,
+  //     description: "Sandals",
+  //   },
+  //   {
+  //     id: 32,
+  //     income: true,
+  //     amount: 22400,
+  //     description: "Pay",
+  //   },
+  //   {
+  //     id: 43,
+  //     income: true,
+  //     amount: 2400,
+  //     description: "side hustle 2",
+  //   },
+  // ];
+  //   useEffect(() => {
+//     const keyboardDidShowListener = Keyboard.addListener(
+//       "keyboardDidShow",
+//       onKeyboardDidShow
+//     );
+//     const keyboardDidHideListener = Keyboard.addListener(
+//       "keyboardDidHide",
+//       onKeyboardDidHide
+//     );
+
+//     return () => {
+//       keyboardDidShowListener.remove();
+//       keyboardDidHideListener.remove();
+//     };
+//   }, [keyboardOffset]);
+//   const [isKeyboardOpen, setIsKeyboardOpen] = useState(false);
+//   const [showLoginSvg, setShowLoginSvg] = useState(true);
+
+//   const keyboardDidShow = () => {
+//     setIsKeyboardOpen(true);
+//     // setShowLoginSvg(false);
+//   };
+
+//   const keyboardDidHide = () => {
+//     setIsKeyboardOpen(false);
+//     // setShowLoginSvg(true);
+//   };
+
+//   Keyboard.addListener("keyboardDidShow", keyboardDidShow);
+//   Keyboard.addListener("keyboardDidHide", keyboardDidHide);
+
+//   const handleBtnPress = () => {
+//     navigation.navigate("Home");
+//   };
+
+//   const onKeyboardDidShow = (event) => {
+//     const keyboardHeight = event.endCoordinates.height;
+//     setKeyboardOffset(keyboardHeight);
+//   };
+
+//   const onKeyboardDidHide = () => {
+//     setKeyboardOffset(0);
+//   };
+// const styles = StyleSheet.create({
+//   loginPageContainer: {
+//     marginTop:
+//       Platform.OS == "android" ? StatusBar.currentHeight : SafeAreaView,
+//     padding: 20,
+//     flex: 1,
+//     borderRadius: 5,
+//     height: "100%",
+//   },
+//   loginSvgView: {
+//     height: "40%",
+//     display: "flex",
+//     width: "100%",
+//     justifyContent: "center",
+//     alignItems: "center",
+//   },
+//   inputComponentView: {
+//     display: "flex",
+//     flexDirection: "column",
+//     gap: 2,
+//     height: "60%",
+//   },
+//   loginTextInput: {
+//     borderWidth: 1,
+//     borderRadius: 10,
+//     padding: 14,
+//     borderColor: "grey",
+//   },
+//   textInputContainer: {
+//     gap: 20,
+//   },
+//   loginTitleText: {
+//     fontSize: 40,
+//     fontWeight: "bold",
+//   },
+//   loginTitleTextContainer: {
+//     width: "100%",
+//     display: "flex",
+//     justifyContent: "center",
+//     alignItems: "center",
+//   },
+//   loginSubmitBtn: {
+//     width: "100%",
+//     // padding: 2,
+
+//     justifyContent: "flex-end",
+//     alignItems: "flex-end",
+//   },
+//   forgotPasswordLink: {
+//     color: "blue",
+//   },
+// });
+
+// {loginNameItems.map((itemName) => {
+//     return (
+//       <LoginInputs
+//         name={itemName}
+//         key={Math.random()}
+//         value={itemName}
+//       />
+//     );
+//   })}
+//   const [keyboardOffset, setKeyboardOffset] = useState(0);
+// import {
+//   View,
+//   Text,
+//   StyleSheet,
+//   Platform,
+//   SafeAreaView,
+//   StatusBar,
+//   Dimensions,
+//   TextInput,
+//   Keyboard,
+//   //   Button,
+//   KeyboardAvoidingView,
+// } from "react-native";
+// import React, { useEffect, useState } from "react";
+// import LoginSvg from "../assets/imgs/login.svg";
+// import CustomButton from "./Button";
+
+// let screenWidth = Dimensions.get("screen").width;
+
+// const LoginPageComponent = ({ navigation }) => {
+//   const loginNameItems = ["Name", "Email", "Password"];
+//   const LoginInputs = ({ name }) => {
+//     return (
+//       <View>
+//         <Text style={{ paddingLeft: 10, fontWeight: "bold" }}>{name}</Text>
+//         <TextInput style={styles.loginTextInput}></TextInput>
+//       </View>
+//     );
+//   };
+
+//   const handleBtnPress = () => {
+//     navigation.navigate("Home");
+//   };
+
+//   return (
+//     <KeyboardAvoidingView
+//       style={styles.loginPageContainer}
+//       behavior="padding"
+//       keyboardVerticalOffset={Platform.OS == "ios" ? 100 : 52}
+//     >
+//       <View style={[styles.loginSvgView]}>
+//         <LoginSvg height={150} />
+//       </View>
+
+//       <View style={styles.inputComponentView}>
+//         <View style={styles.loginTitleTextContainer}>
+//           <Text style={styles.loginTitleText}>Login</Text>
+//         </View>
+//         <View style={styles.textInputContainer}>
+//           {loginNameItems.map((itemName) => {
+//             return <LoginInputs name={itemName} />;
+//           })}
+//           <Text style={styles.forgotPasswordLink}>Forgot password? click</Text>
+//         </View>
+//         <View style={styles.loginSubmitBtn}>
+//           <CustomButton
+//             str="Sign Up"
+//             bgColor="blue"
+//             btnTextColor="white"
+//             state={false}
+//             width="40%"
+//             onPress={handleBtnPress}
+//           />
+//         </View>
+//       </View>
+//     </KeyboardAvoidingView>
+//   );
+// };
+
+// export default LoginPageComponent;
+
+{
+  /* <KeyboardAvoidingView style={styles.loginPageContainer} behavior="padding">
+{isKeyboardOpen ? (
+  <View style={styles.inputComponentView}>
+    <View style={styles.loginTitleTextContainer}>
+      <Text style={styles.loginTitleText}>Login</Text>
+    </View>
+    <View style={styles.textInputContainer}>
+      {loginNameItems.map((itemName) => {
+        return <LoginInputs name={itemName} />;
+      })}
+      <Text style={styles.forgotPasswordLink}>
+        Forgot password? click
+      </Text>
+    </View>
+    <View style={styles.loginSubmitBtn}>
+      <CustomButton
+        str="Sign Up"
+        bgColor="blue"
+        btnTextColor="white"
+        state={false}
+        width="40%"
+        onPress={handleBtnPress}
+      />
+    </View>
+  </View>
+) : (
+  <View style={styles.loginSvgView}>
+    <LoginSvg height={200} />
+  </View>
+)}
+<View style={styles.inputComponentView}>
+  <View style={styles.loginTitleTextContainer}>
+    <Text style={styles.loginTitleText}>Login</Text>
+  </View>
+  <View style={styles.textInputContainer}>
+    {loginNameItems.map((itemName) => {
+      return <LoginInputs name={itemName} />;
+    })}
+    <Text style={styles.forgotPasswordLink}>Forgot password? click</Text>
+  </View>
+  <View style={styles.loginSubmitBtn}>
+    <CustomButton
+      str="Sign Up"
+      bgColor="blue"
+      btnTextColor="white"
+      state={false}
+      width="40%"
+      onPress={handleBtnPress}
+    />
+  </View>
+</View>
+</KeyboardAvoidingView> */
+}
+
+{
+  /* <KeyboardAvoidingView style={styles.loginPageContainer} behavior="padding">
+      {isKeyboardOpen ? (
+        <View style={styles.loginSvgView}>
+          <LoginSvg height={200} />
+        </View>
+      ) : null}
+      <View style={styles.inputComponentView}>
+        <View style={styles.loginTitleTextContainer}>
+          <Text style={styles.loginTitleText}>Login</Text>
+        </View>
+        <View style={styles.textInputContainer}>
+          {loginNameItems.map((itemName) => {
+            return <LoginInputs name={itemName} />;
+          })}
+          <Text style={styles.forgotPasswordLink}>Forgot password? click</Text>
+        </View>
+        <View style={styles.loginSubmitBtn}>
+          <CustomButton
+            str="Sign Up"
+            bgColor="blue"
+            btnTextColor="white"
+            state={false}
+            width="40%"
+            onPress={handleBtnPress}
+          />
+        </View>
+      </View>
+    </KeyboardAvoidingView> */
+}
+
+ // let income = transactions.filter((item) => item.income !== false);
+  // let total = 0;
+  // income.forEach((item) => {
+  //   total = Number(item.amount) + total;
+  // });

@@ -1,8 +1,23 @@
 import { View, StyleSheet, Text } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { useSelector, useDispatch } from "react-redux";
 
 export const CardDisp = () => {
+  let transactions = useSelector((state) => state.expense);
+  let income = transactions.filter((item) => item.income !== false);
+  let totalIncome = 0;
+  income.forEach((item) => {
+    totalIncome = Number(item.amount) + totalIncome;
+  });
+
+  let expense = transactions.filter((item) => item.income !== true);
+  let totalExpense = 0;
+  expense.forEach((item) => {
+    totalExpense = Number(item.amount) + totalExpense;
+  });
+
+  let totalBalance = totalIncome + totalExpense;
   return (
     <View style={styles.cardContainer}>
       <LinearGradient
@@ -13,7 +28,7 @@ export const CardDisp = () => {
         <View>
           <Text style={styles.cardTotBalanceText}>Total Balance</Text>
           <Text style={[styles.cardTotBalanceText, styles.cardTotBalText]}>
-            18000
+            {totalBalance}
           </Text>
         </View>
         <View style={styles.cardBalIncomeExpese}>
@@ -31,7 +46,7 @@ export const CardDisp = () => {
                   styles.cardIncomeExpenseText,
                 ]}
               >
-                30500
+                {totalIncome}
               </Text>
             </View>
           </View>
@@ -49,7 +64,7 @@ export const CardDisp = () => {
                   styles.cardIncomeExpenseText,
                 ]}
               >
-                12500
+                {totalExpense}
               </Text>
             </View>
           </View>
